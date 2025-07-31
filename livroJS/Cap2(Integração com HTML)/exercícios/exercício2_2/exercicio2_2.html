@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2_2</title>
+</head>
+<style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        form{
+            text-align: center;
+            padding: 30px;
+        }
+        p{
+            padding: 10px;
+        }
+        h2{
+            margin-top: 15px;
+            text-align: center;
+        }
+        .botao{
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+</style>
+<body>
+    <h1>Lan House Js</h1>
+    <form>
+        <p>Valor por 15min  de Uso R$:
+             <input type="number" id="inValor" required>
+        </p>
+        <p>Tempo de Uso do Cliente:
+            <input type="Number" id="inTempo" required>
+        </p>
+        <input class="botao" type="submit" value="Calcular Valor a Pagar">
+    </form>
+
+    <h2 id="outResp1"></h2>
+    <script src="exercicios2_2.js"></script>
+</body>
+</html>

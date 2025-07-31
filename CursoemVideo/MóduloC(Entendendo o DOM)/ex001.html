@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando DOM</title>
+</head>
+<style>
+    body{
+        background-color: rgb(52, 188, 241);
+        color: white;
+        font: normal 18pt arial;
+    }
+</style>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">clique aqui</div>
+    <script>
+
+        var p1 = window.document.getElementsByTagName("p")[0]//SELECIONADO O PRIMEIRO PARAGRAFO DENTRO DO "[]" COM O NÚMERO 0
+        var corpo = window.document.body
+       /*
+        var d = window.document.getElementById('msg')
+        d.style.background = "green"
+        d.innerText = 'estou aguardando...'
+        window.document.write(p1.innerText)
+       */
+
+       /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá'
+       */
+
+       var p2 = document.querySelector("div#msg")
+       p2.innerText = 'oie'
+
+    </script>
+</body>
+</html>
