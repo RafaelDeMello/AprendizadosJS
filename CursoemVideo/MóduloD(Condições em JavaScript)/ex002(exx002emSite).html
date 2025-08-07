@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugar no mundo</title>
+</head>
+<body>
+    <h1>Geografia</h1>
+    <p>Qual o país que você está vivendo?
+        <input type="text" id="inPaisV">
+    </p>
+    <input type="button" value="Exibir mensagem!" onclick="mostrar()">
+    <div id="res">
+
+    </div>
+    <script>
+    function mostrar(){
+        const paisO = "Brasil"
+        const paisVtxt = document.getElementById("inPaisV")
+        const paisV = paisVtxt.value
+        const res = document.getElementById("res")
+        res.innerHTML = `<p>Vivendo em pais ${paisV}</p>`
+        if (paisV != paisO){
+            res.innerHTML +=`Você é estrangeiro`
+        } else{
+            res.innerHTML=`Você é Brasileiro`
+        }
+    }
+    </script>
+</body>
+</html>
