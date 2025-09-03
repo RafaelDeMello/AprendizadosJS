@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5_3</title>
+</head>
+<body>
+    <script>
+        let num // declara variavel num com let, pois ela pode ser alterada.
+                // e será acessada foro do bloco do ... while
+        do {
+            num = Number(prompt("Número: ")) // le um numero
+            if (num == 0 || isNaN(num)) { // Se numero igual a 0 ou inválido
+                alert("Digite um número válido.");
+            }
+        } while (num == 0 || isNaN(num)); // enquanto numero for zero ou inválido
+        let pares = `pares entre 1 e ${num}: ` //String que irá conter a resposta
+        for (let i = 2; i <= num; i = i + 2){
+            pares = pares + i + ","
+        }
+        alert(pares) //exibe a lista de pares
+
+    </script>
+</body>
+</html>
