@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex5_4</title>
+</head>
+<body>
+    <script>
+        alert("Digite 0 para sair!");
+        do {
+            const num = Number(prompt("Número: ")); // Le o numero
+            if (num == 0 || isNaN(num)) { // Verifica se num é valido
+                const sair = confirm("Confirmar saída? "); //Solicita confirmação
+                if (sair) {
+                    break; // sai da repetição
+                } else {
+                    continue; // volta ao início da repetição
+                }
+            }
+            if (num % 2 == 0) { // Se par
+                alert(`O dobro do número ${num} é ${num * 2}`); // Mostra o dobro
+            } else { // Se ímpar
+                alert(`O triplo do número ${num} é ${num * 3}`); // Mostra o triplo
+            }
+        } while (true); // enquanto for verdadeiro (só sai do laco pelo break)
+        alert("Fim do programa!");
+    </script>
+</body>
+</html>
