@@ -14,7 +14,7 @@ function clicar() {
               estrelas = estrelas + "-"
             }
         }   
-        res.innerText = ""
+        res.innerText = estrelas
     }
     
 }
