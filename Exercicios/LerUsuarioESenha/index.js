@@ -8,6 +8,7 @@ function cadastrar() {
   let s = senha.value;
   if (u == 0 || s == 0) {
     window.alert("Preencha os campos");
+    return
   } else {
     while (u == s) {
       window.alert("O usuário não pode ser igual a senha");
