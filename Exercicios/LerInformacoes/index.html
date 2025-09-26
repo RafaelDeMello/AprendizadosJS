@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ler informações</title>
+</head>
+<body> 
+    <h1>Programa para ler e validar as seguintes informações:</h1> 
+    <div id="dados">
+        <form>
+            <p>Nome:
+                <input type="text" id="txtN">
+            </p>
+            <p>Idade:
+                <input type="number" min="0" max="150" id="txtI">
+            </p>
+            <p>Salário:
+                <input type="number" min="0" id="txtSa">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sexo" value="Masculino">
+                <label for="masculino">Masculino</label>
+
+                <input type="radio" name="sexo" value="Feminino">
+                <label for="feminino">Feminino</label>
+            </p>
+            <p>Estado civil:
+                <input type="radio" name="estadoCivil" value="Solteiro(a)">
+                <label for="S">Solteiro(a)</label>
+                <input type="radio" name="estadoCivil" value="Casado(a)">
+                <label for="C">Casado(a)</label>
+                <input type="radio" name="estadoCivil" value="Viúvo(a)">
+                <label for="">Viúvo(a)</label>
+                <input type="radio" name="estadoCivil" value="Divorciado(a)">
+                <label for="D">Divorciado(a)</label>
+            </p>
+        </form>
+        <input type="button" value="Cadastrar Dados" onclick="cadastrar()">
+    </div>
+    <div id="resultado">
+       <h2 id="textH2"></h2>
+       <input 
+       type="button" 
+       value="Mostrar Dados" 
+       style="display: none;" 
+       id="bttMostrar"
+       onclick="mostrarDados()">
+       <p id="printDados"></p>
+    </div>
+
+      <script src="index.js"></script>
+</body>
+</html>
