@@ -9,13 +9,22 @@ function mostrar(){
         window.alert("Preencha todos os campos!")
         return
     }
-    if(n1 % 1== 0 && n1 % n1 !== 0){
-        window.alert(`${n1} não é um número primo. Insira um valor válido!`)
-        return
-    }
-    if(n1 < n2){
-        for (let i = n1; i < n2; i++){
+    
+    let inicio
+    let fim
 
-        }
+    if(n1 < n2){
+        inicio = n1
+        fim = n2
+    } else {
+        inicio = n2
+        fim = n1
     }
+
+    let resposta = ""
+
+    for (let i = inicio ; i <= fim; i++){
+        resposta += i + " "
+    }
+    res.innerText = `Os números são: ${resposta}.`
 }
