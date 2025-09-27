@@ -25,7 +25,7 @@ function mostrar(){
     let resposta = ""
     let soma = 0
 
-    for (let i = inicio ; i <= fim; i++){
+    for (let i = inicio + 1 ; i <= fim - 1; i++){
         resposta += i + " "
         soma = soma + i
     }
