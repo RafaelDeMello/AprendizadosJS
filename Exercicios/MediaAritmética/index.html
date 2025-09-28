@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <h1>Calcular Média Aritmética</h1>
+    <p>Digite a 1º Nota:
+        <input type="number" id="inNota1">
+    </p>
+    <p>Digite a 2º Nota
+        <input type="number" id="inNota2">
+    </p>
+    <p>Digite a 3º Nota
+        <input type="number" id="inNota3">
+    </p>
+    <input type="button" id="btn1" value="Calcular Média:">
+
+    <h3 id="res"></h3>
+
+    <script>
+        //Capturar elementos da página
+        const nota1 = document.getElementById("inNota1")
+        const nota2 = document.getElementById("inNota2")
+        const nota3 = document.getElementById("inNota3")
+        const res = document.getElementById("res")
+        const btn = document.getElementById("btn1")
+
+
+        //Adicionar ouvinte de eventos no botão
+        btn.addEventListener("click", () =>{
+            const n1 = Number(nota1.value)
+            const n2 = Number(nota2.value)
+            const n3 = Number(nota3.value)
+            
+            const soma = n1 + n2 + n3
+            const media = soma / 3
+
+            res.innerText = `A média do aluno é: ${media.toFixed(2)} \n`
+
+            if(media > 6){
+                res.innerText += "Aluno aprovado!"
+            } else if (media >= 5){
+                res.innerText += "Aluno em recuperação!"
+            } else {
+                res.innerText += "Aluno reprovado!"
+            }
+
+      
+        })
+       
+
+
+    </script>
+</body>
+</html>
