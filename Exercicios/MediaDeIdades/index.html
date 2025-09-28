@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de idades</title>
+</head>
+<body>
+    <h1>Média de idades</h1>
+    <p>Faça um programa que peça para n pessoas a sua idade, ao final o
+    programa devera verificar se a média de idade da turma varia
+    entre 0 e 25,26 e 60 e maior que 60; e então,
+    dizer se a turma é jovem, adulta ou idosa, conforme a média calculada.
+    </p>
+    <p id="res"></p>
+    <button id="btnC">Comecar</button>
+
+    <script>
+        const comecar = document.getElementById("btnC")
+        const res = document.getElementById("res")
+
+        comecar.addEventListener("click", (e) => {
+            e.preventDefault()
+            let Idd = 0
+            let somaIdd = 0
+            for (let i = 1; i <= 3; i++){
+                let Idd = Number(prompt("Qual a sua Idade?"))
+                somaIdd += Idd
+                res.innerText += `A ${i}º idade é: ${Idd} \n`
+            }
+
+            let mediaIdd = somaIdd / 3
+            let clas = ""
+
+            if(mediaIdd <= 25){
+               clas = "jovem"
+            } else if (mediaIdd <= 60){
+                clas = "adulta"
+            } else{
+                clas = "idosa"
+            }
+
+            res.innerText += `A média das idades é ${mediaIdd.toFixed(2)} portanto a classificação é: ${clas}`
+
+            console.log(somaIdd)
+            console.log(mediaIdd)
+            console.log(clas)
+        })
+    </script>
+</body>
+</html>
