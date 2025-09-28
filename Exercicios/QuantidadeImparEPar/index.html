@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quantidade de Impares Vs Quantidade De Par </h1>
+    <p>Faça um programa que peça 10 números inteiros, calcule e mostre
+       a quantidade de números pares e a quantidade de números ímpares.
+    </p>
+
+    <button onclick="mostrar()"> Mostrar </button>
+    <h3 id="res"></h3>
+
+    <script>
+        function mostrar(){
+            const res = document.getElementById("res")
+             
+            let i = 1
+            let f = 10
+
+            let par = 0
+            let impar = 0
+
+            while (i <= f){
+                if(i % 2 == 0){
+                    par ++ 
+                } else {
+                    impar ++
+                }
+                i++
+            }
+
+            res.innerText = `Quantidade de números Pares: ${par} \n
+            Quantidade de números Impares: ${impar}`
+        }
+    </script>
+</body>
+</html>
