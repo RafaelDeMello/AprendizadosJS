@@ -13,19 +13,25 @@
 
     <button id="btn">Começar</button>
 
+    <h3 id="res"></h3>
+
     <script>
         const btn = document.getElementById("btn")
-         let N = 0
-         let Num 
-         let c = 1
-         let menor = Num
-         let maior = Num
-         let soma = 0
+        const res = document.getElementById("res")
+         
 
 
         btn.addEventListener("click", (e) => {
             
             e.preventDefault()
+
+            let N = 0
+            let Num 
+            let c = 1
+            let menor = Num
+            let maior = Num
+            let soma = 0
+            let texto = ""
 
             N = Number(prompt("Quantos Números serão? "))
             while(c <= N){
@@ -41,8 +47,15 @@
                 } else if (Num > maior) {
                       maior = Num
                 }
+                texto += `${c}º valor: ${Num} \n`
                 c++
+                
             }
+
+            res.innerText = `Foram digitados ${N} números, sendo eles: \n`
+            res.innerText += `${texto}`
+            res.innerText += `O menor é "${menor}" e o maior é "${maior}"`
+            
             console.log(`Soma: ${soma}`)
             console.log(`Menor: ${menor}`)
             console.log(`Maior: ${maior}`)
