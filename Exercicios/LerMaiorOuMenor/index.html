@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LerMaouirOuMenor</title>
+</head>
+<body>
+    <h1>Ler qual é maior e qual é o menor</h1>
+    <p>Faça um programa que, dado um conjunto de N números,
+     determine o menor valor, o maior valor e a soma dos valores.
+    </p>
+
+    <button id="btn">Começar</button>
+
+    <script>
+        const btn = document.getElementById("btn")
+         let N = 0
+         let Num 
+         let c = 1
+         let menor = Num
+         let maior = Num
+         let soma = 0
+
+
+        btn.addEventListener("click", (e) => {
+            
+            e.preventDefault()
+
+            N = Number(prompt("Quantos Números serão? "))
+            while(c <= N){
+                Num = Number(prompt(`Digite o ${c}º valor: `))
+                soma += Num
+                if(c === 1){
+                    menor = Num
+                } else if (Num < menor){
+                    menor = Num
+                }
+                if ( c === 1){
+                    maior = Num
+                } else if (Num > maior) {
+                      maior = Num
+                }
+                c++
+            }
+            console.log(`Soma: ${soma}`)
+            console.log(`Menor: ${menor}`)
+            console.log(`Maior: ${maior}`)
+        })
+        
+    </script>
+</body>
+</html>
