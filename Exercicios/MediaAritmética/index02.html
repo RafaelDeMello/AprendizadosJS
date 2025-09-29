@@ -22,10 +22,9 @@
         //Adicionar ouvinte de eventos no botão
         btn.addEventListener("click", () => {
             
-            let notas = []
-            let soma = 0
+            let notas = [] 
             for(let i = 0; i < 3; i++){
-                notas.push(Number(prompt(`Digite a ${i + 1}º nota: `)))
+                notas[i] = Number(prompt(`Digite a ${i + 1}º nota: `))
                 resposta += `O valor da ${i + 1}º é: ${notas[i].toFixed(2)} \n`
             }
             soma = notas[0] + notas[1] + notas[2]
