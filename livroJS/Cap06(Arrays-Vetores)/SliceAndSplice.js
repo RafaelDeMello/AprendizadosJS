@@ -6,5 +6,8 @@ console.log(letras2) // ['C', 'D']
 console.log(letras3) // ['A', 'B', 'C']
 
 const retira = letras.splice(2, 1) //remove a partir da posição 2, 1 elemento
-console.log(letras) // ['A', 'B', 'D']
+console.log("-".repeat(15))
+console.log(letras.join(" = ")) // ['A', 'B', 'D']
 console.log(retira) // ['C']
+
+ 
