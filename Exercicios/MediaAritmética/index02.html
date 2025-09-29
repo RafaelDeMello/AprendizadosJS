@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética 2</title>
+</head>
+<body>
+    <h1>Calcular Média Aritmética 2</h1>
+    <input type="button" id="btn1" value="Calcular Média">
+
+    <h3 id="res"></h3>
+
+    <script>
+        //Capturar elementos da página
+        const res = document.getElementById("res")
+        const btn = document.getElementById("btn1")
+        let  resposta = ""
+     
+        
+
+        //Adicionar ouvinte de eventos no botão
+        btn.addEventListener("click", () => {
+            
+            let notas = []
+            let soma = 0
+            for(let i = 0; i < 3; i++){
+                notas.push(Number(prompt(`Digite a ${i + 1}º nota: `)))
+                resposta += `O valor da ${i + 1}º é: ${notas[i].toFixed(2)} \n`
+            }
+            soma = notas[0] + notas[1] + notas[2]
+            let media = soma / 3
+            console.log(notas)
+            console.log(soma)
+            res.innerText +=  `${resposta} \n`
+            res.innerText += `A soma dos valores é ${soma.toFixed(2)} e a média é: ${media.toFixed(2)}`
+        })
+
+        
+       
+
+
+    </script>
+</body>
+</html>
