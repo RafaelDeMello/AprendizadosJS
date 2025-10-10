@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Descubra o Numero</title>
+</head>
+<body>
+    <h1>Jogo Descubra o Número</h1>
+    <form>
+        <p>Número:
+            <input type="number" id="inNumero" min="1" max="100" autofocus required>
+            <input type="submit" value="apostar" id="btSubmit">
+            <input type="button" value="Jogar novamente" id="btNovo" class="oculta">
+        </p>
+        <h3>Erros: <span id="outErros">0</span></h3>
+        <h3>Chances: <span id="outChances">0</span></h3>
+        <h3 id="outDica" class="italico">Dica: é um número entre 1 a 100</h3>
+
+        <script src="index.js"></script>
+
+    </form>
+</body>
+</html>
