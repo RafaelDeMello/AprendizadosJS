@@ -2,7 +2,7 @@
 const frm = document.querySelector("form")
 const respErros = document.getElementById("outErros")
 const respChances = document.getElementById("outChances")
-const respDica =  document.getElementById("respDica")
+const respDica =  document.getElementById("outDica")
 
 const erros = [] //vetor de escopo global com numeros ja apostados
 const sorteado = Math.floor(Math.random() * 100) + 1 //num aleatório entre 1 e 100
@@ -41,6 +41,8 @@ frm.addEventListener("submit", (e) => {
 
     frm.inNumero.value = "" //limpa o campo de entrada
     frm.inNumero.focus() //posiciona o cursor neste campo
-
-
 })
+ frm.btNovo.addEventListener("click", () => {
+        location.reload() //recarrega a página
+        console.log("Recarregando a página...")
+ })
