@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array de dois números</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Array de dois numeros</h1>
     <form>
-        <p>Digite os valores:
-            <input type="number" id="inNumeros">
-            <input type="button" value="Adicionar" onclick="clicar()">
-        </p>
+      <p>
+        Digite os valores:
+        <input type="number" id="inNumeros" />
+        <input type="button" value="Adicionar" onclick="clicar()" />
+      </p>
     </form>
-    <pre id="outRes"></pre>
+    <h3 id="outRes"></h3>
+    <input
+      type="button"
+      onclick="ordenar()"
+      id="btnOrdenar"
+      value="Ordenar"
+      style="display: none"
+    />
+    <h3 id="outRes2"></h3>
     <script>
-        const frm = document.querySelector("form")
-        const res = document.getElementById("outRes")
-        const vetor = []
-        let lista = ""
-        function clicar(){
-            vetor.push(Number(frm.inNumeros.value))
-            frm.inNumeros.value = ""
-            frm.inNumeros.focus()
-            lista = `${vetor[0]}`
+      const frm = document.querySelector("form");
+      const res = document.getElementById("outRes");
+      const res2 = document.getElementById("outRes2")
+      const btnOrdenar = document.getElementById("btnOrdenar")
+      const vetor = [];
+      let lista = "";
+      function clicar() {
+        const valores = frm.inNumeros.value
+        if (!valores) {
+          window.alert("Insira Valores Válidos!");
+          vetor.pop()
+          frm.inNumeros.value = "";
+          frm.inNumeros.focus();
+          return
+        } else {
+          vetor.push(Number(valores));
+          frm.inNumeros.value = "";
+          frm.inNumeros.focus();
+          res.innerText = `O vetor é na orderm original é: [${vetor}]`;
+          btnOrdenar.style.display = "block"
         }
-        res.innerText = `${lista}`
-    </script>
-</body>
-</html>
+      }
+     function ordenar() {
+        let ordenado = [];
+        if (vetor[0] > vetor[1]) {
+          ordenado = [vetor[1], vetor[0]];
+        } else {
+          ordenado = [vetor[0], vetor[1]];
+        }
 
+        res2.innerText = `Vetor ordenado: [${ordenado}]`;
+      }
+    </script>
+  </body>
+</html>
