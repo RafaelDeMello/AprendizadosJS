@@ -2,5 +2,5 @@
   "github.copilot.advanced": {
     
   },
-  "chat.disableAIFeatures": false
+  "chat.disableAIFeatures": true
 }

@@ -7,11 +7,26 @@
 </head>
 <body>
     <h1>Array de dois numeros</h1>
-    <p>Digite os valores: 
-        <input type="number" id="inNumeros">
-        <input type="button" value="Adicionar" onclick="clicar()">
-    </p>
-    
+    <form>
+        <p>Digite os valores:
+            <input type="number" id="inNumeros">
+            <input type="button" value="Adicionar" onclick="clicar()">
+        </p>
+    </form>
+    <pre id="outRes"></pre>
+    <script>
+        const frm = document.querySelector("form")
+        const res = document.getElementById("outRes")
+        const vetor = []
+        let lista = ""
+        function clicar(){
+            vetor.push(Number(frm.inNumeros.value))
+            frm.inNumeros.value = ""
+            frm.inNumeros.focus()
+            lista = `${vetor[0]}`
+        }
+        res.innerText = `${lista}`
+    </script>
 </body>
 </html>
 
