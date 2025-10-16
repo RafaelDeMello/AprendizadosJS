@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Array de dois números</title>
+    <title>Ordenar Arrays</title>
   </head>
   <body>
-    <h1>Array de dois numeros</h1>
+    <h1>Ordenar Arrays</h1>
     <form>
       <p>
         Digite os valores:
@@ -48,15 +48,38 @@
         }
       }
       function ordenar() {
-        let ordenado = [];
-  
-          if (vetor[0] > vetor[1]) {
-            ordenado = [vetor[1], vetor[0]];
-          } else {
-            ordenado = [vetor[0], vetor[1]];
-          }
+        let ordenadoC = [...vetor];
+        let ordenadoD = [...vetor]
+        let trocou
 
-        res2.innerText = `Vetor ordenado: [${ordenado}]`;
+        do{
+            trocou = false
+            
+            for(let i = 0; i < ordenadoC.length - 1; i++){
+                if(ordenadoC[i] > ordenadoC[i + 1]){
+                  let temp = ordenadoC[i]
+                  ordenadoC[i] = ordenadoC[i + 1];
+                  ordenadoC[i + 1] = temp;
+                  trocou = true
+                }
+            }
+        } while (trocou)
+
+        res2.innerText = `Vetor ordenado em crescente: [${ordenadoC}] \n`
+       
+        do{
+            trocou = false
+
+            for (let i = 0; i < ordenadoD.length - 1; i++){
+                if(ordenadoD[i] < ordenadoD[i + 1]){
+                    let temp = ordenadoD[i]
+                    ordenadoD[i] = ordenadoD[i + 1]
+                    ordenadoD[i + 1] = temp
+                    trocou = true
+                }
+            }
+        } while (trocou)
+        res2.innerText += `Vetor ordenado em crescente: [${ordenadoD}]`
       }
     </script>
   </body>

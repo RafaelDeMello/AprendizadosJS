@@ -15,11 +15,10 @@
 
 const numeros = [1 ,3 ,4 ,2]
 const ordenarC = [...numeros]
-let trocar
-while(trocar){
+
+while(trocar = true){
     for (let i = 0; i < numeros.length - 1; i++){
         let temp = 0
-        trocar = false
         if (ordenarC[i] > ordenarC[i + 1]){
            temp = ordenarC[i]
            ordenarC[i] = ordenarC[i + 1]
