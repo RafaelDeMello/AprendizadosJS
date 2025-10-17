@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array ao contrário</title>
+  </head>
+  <body>
+    <h1>Exbir Arrays de qualquer tamanho ao contrário</h1>
+    <p>
+      Digite os valores
+      <input type="number" id="inNumero" min="0" required />
+      <input
+        type="button"
+        value="Cadastrar valor"
+        id="btnCdt"
+        onclick="pegarValor()"
+      />
+    </p>
+    <h3 id="outValores"></h3>
+    <div style="display: flex; gap: 5px;">
+        <input
+          type="button"
+          value="Inverter Vetor"
+          id="btnAoc"
+          style="display: none"
+          onclick="inverter()"
+        />
+        <input
+          type="button"
+          value="Vetor em ordem crescente"
+          id="OC"
+          style="display: none"
+          onclick="OrdemCrescente()"
+        />
+        <input
+          type="button"
+          value="Vetor em decrescente"
+          id="OD"
+          style="display: none"
+          onclick="OrdemDecrescente()"
+        />
+    </div>
+    
+    <h3 id="outVetorInvertido"></h3>
+    <h3 id="outCrescente"></h3>
+    <h3 id="outDecrescente"></h3>
+
+    <script src="index.js"></script>
+  </body>
+</html>
