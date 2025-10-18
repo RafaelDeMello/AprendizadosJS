@@ -17,7 +17,7 @@ const vetInd = []
 
 
 function acharInd(vet, valor){
-        vetor.forEach((ele, ind) => {
+        vet.forEach((ele, ind) => {
             if(ele == valor){
                 vetInd.push(ind)
             }
